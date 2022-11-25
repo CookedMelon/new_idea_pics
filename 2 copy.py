@@ -26,4 +26,4 @@ labels   = ['USA', 'China', 'India', 'Japan', 'Germany', 'Russia', 'Brazil', 'UK
 quants   = [15094025.0, 11299967.0, 4457784.0, 4440376.0, 3099080.0, 2383402.0, 2293954.0, 2260803.0, 2217900.0, 1846950.0]
  
 draw_pie(labels,quants)
-plt.savefig('./pictures/pic/pic1.jpg') 
+plt.savefig('./pic/pic1.jpg') 

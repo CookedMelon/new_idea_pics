@@ -17,6 +17,7 @@ def my_lebal(pct, allvals):
 def draw_pie(labels,quants):
     plt.pie(quants, explode=expl, colors=colors, labels=labels,autopct=lambda x:my_lebal(x,quants),pctdistance=0.6, shadow=True, labeldistance=1.0, startangle=50,center=(0, 0),wedgeprops={'lw':1,'ec':'lightblue'},textprops={'fontsize': 15, 'color': 'k'})
     plt.title(title,fontweight='bold',fontdict={'fontsize': 26},y=0.98)
+    plt.legend(loc="best",bbox_to_anchor=(1.05,1.0),borderaxespad = 0.)
  
 draw_pie(labels,quants)
-plt.savefig('./pictures/pic/'+title+'.jpg') 
+plt.savefig('./pic/'+title+'.jpg') 

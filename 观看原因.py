@@ -2,7 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-plt.figure(1, figsize=(6,6))
+plt.figure(1, figsize=(8,6))
 expl = [0.05,0.05,0.05,0.15]   #第二块即China离开圆心0.1
 colors  = ["tomato","cornflowerblue","yellow","coral"] 
 labels   = ['个人兴趣', '教学要求', '线上推送', '自身发展']
@@ -15,8 +15,10 @@ def my_lebal(pct, allvals):
     absolute = int(pct/100.*np.sum(allvals))
     return "{:.1f}%\n({:d}人)".format(pct, absolute)
 def draw_pie(labels,quants):
-    plt.pie(quants, explode=expl, colors=colors, labels=labels,autopct=lambda x:my_lebal(x,quants),pctdistance=0.6, shadow=True, labeldistance=1.0, startangle=50,center=(0, 0),wedgeprops={'lw':1,'ec':'lightblue'},textprops={'fontsize': 15, 'color': 'k'})
+    plt.pie(quants, explode=expl, colors=colors, labels=labels,autopct=lambda x:my_lebal(x,quants),pctdistance=0.6, shadow=True, labeldistance=1.1, startangle=50,center=(0, 0),wedgeprops={'lw':1,'ec':'lightblue'},textprops={'fontsize': 15, 'color': 'k'})
     plt.title(title,fontweight='bold',fontdict={'fontsize': 26},y=0.98)
+    plt.legend(loc="best",bbox_to_anchor=(1.05,1.0),borderaxespad = 0.)
+    plt.legend(loc="best",bbox_to_anchor=(1.05,1.0),borderaxespad = 0.)
  
 draw_pie(labels,quants)
-plt.savefig('./pictures/pic/'+title+'.jpg') 
+plt.savefig('./pic/'+title+'.jpg') 
