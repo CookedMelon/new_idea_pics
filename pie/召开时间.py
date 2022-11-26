@@ -2,7 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-plt.figure(1, figsize=(7.5,6))
+plt.figure(1, figsize=(6.5,5))
 expl = [0.05,0.25,0.20,0.10]   #第二块即China离开圆心0.1
 colors  = ["cornflowerblue","seagreen","yellow","coral"]  #设置颜色（循环显示）
 labels   = ['10月16日（正确）', '10月15日', '10月17日', '10月20日']
